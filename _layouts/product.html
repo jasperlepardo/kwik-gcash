@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="card-scrollable">
+    
+    <div class="card shadow">
+        <div class="card-body">
+            <ul class="list-unstyled">
+                {% for benefit in page.benefits %}
+                    <li class="list-item">{{ benefit.name }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="card shadow">
+        <div class="card-body">
+            <ul class="list-unstyled">
+                {% for premium in page.premium %}
+                    <li class="list-item">{{ premium.name }}</li>
+                    <li class="list-item">{{ premium.amount }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="card shadow">
+        <div class="card-body">
+            <ul class="list-unstyled">
+                {% for coverage in page.coverages %}
+                    <li class="list-item">{{ coverage.name }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+</div>

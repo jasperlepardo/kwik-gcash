@@ -1,0 +1,55 @@
+
+
+.card-scrollable {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-scroll-snap-type: mandatory;
+    scroll-snap-type: x mandatory;
+    -webkit-scroll-snap-destination: 50% 50%;
+    scroll-snap-destination: 50% 50%;
+    margin-left: -16px;
+    margin-right: -16px;
+    /* padding-left: 24px; */
+    /* padding-right: 24px; */
+    /* width: 100vw; */
+    padding-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+    .scrollable {
+    /* flex-wrap: wrap; */
+    }
+}
+
+.card-scrollable .spacer {
+    -webkit-scroll-snap-coordinate: 50% 50%;
+    scroll-snap-coordinate: 50% 50%;
+    scroll-snap-align: center;
+    flex: 0 0;
+    flex-basis: 12px;
+}
+
+.card-scrollable .card {
+    -webkit-scroll-snap-coordinate: 50% 50%;
+    scroll-snap-coordinate: 50% 50%;
+    scroll-snap-align: center;
+    margin-left: 8px;
+    margin-right: 8px;
+    flex: 0 0;
+    flex-basis: calc(100% - 112px);
+
+    border: 0;
+}
+
+.card-scrollable .card:first-child {
+    margin-left: 16px;
+}
+
+.card-scrollable .card:last-child {
+    margin-right: 16px;
+}
+
+
